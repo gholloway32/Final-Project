@@ -1,6 +1,7 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Player/Player.gd" type="Script" id=1]
+[ext_resource path="res://UI/HUD.gd" type="Script" id=2]
 [ext_resource path="res://Assests/muzzleflash.obj" type="ArrayMesh" id=3]
 [ext_resource path="res://UI/InputRemapMenu.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Maze/Maze.gd" type="Script" id=5]
@@ -96,11 +97,27 @@ stream = ExtResource( 12 )
 
 [node name="UI" type="CanvasLayer" parent="."]
 
+[node name="HUD" type="Control" parent="UI"]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Time" type="Label" parent="UI/HUD"]
+margin_right = 40.0
+margin_bottom = 14.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="UI/HUD"]
+autostart = true
+
 [node name="Menu" parent="UI" instance=ExtResource( 4 )]
 pause_mode = 2
 visible = false
 
-[node name="Timer" type="Timer" parent="."]
-autostart = true
-
 [connection signal="timeout" from="Player/Pivot/Pistol/Flash/Timer" to="Player/Pivot/Pistol/Flash" method="_on_Timer_timeout"]
+[connection signal="timeout" from="UI/HUD/Timer" to="UI/HUD" method="_on_Timer_timeout"]

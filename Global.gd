@@ -1,7 +1,7 @@
 extends Node
 
 var menu = null
-var time = 5
+var time = 60
 const SAVE_PATH = "res://settings.cfg"
 var save_file = ConfigFile.new()
 var inputs = ["left","right","forward","back"]
@@ -9,6 +9,11 @@ var inputs = ["left","right","forward","back"]
 func _ready():
 	pause_mode = Node.PAUSE_MODE_PROCESS
 	load_input()
+
+func reset():
+	get_tree().paused = false
+	time = 60
+
 
 func _unhandled_input(_event):
 	if Input.is_action_just_pressed("menu"):
@@ -43,7 +48,8 @@ func save_input():
 		for a in actions:
 			save_file.set_value("Inputs", i, a)
 	save_file.save(SAVE_PATH)
+
 func update_time(t):
 	time += t 
 	if time <= 0:
-		var _scene = get_tree().change_scene("res://UI/End-game.tscn")
+		var _scene = get_tree().change_scene("res://UI/LoseTime.tscn")

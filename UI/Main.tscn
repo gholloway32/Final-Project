@@ -18,7 +18,7 @@ color = Color( 0.266667, 0.266667, 0.266667, 1 )
 [node name="Label" type="Label" parent="."]
 margin_right = 1024.0
 margin_bottom = 600.0
-text = "Welcom to the Game!"
+text = "You have been Infected! Find a cure or DIE!! "
 align = 1
 valign = 1
 
