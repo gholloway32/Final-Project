@@ -157,5 +157,7 @@ mesh = SubResource( 6 )
 skeleton = NodePath("../..")
 material/0 = ExtResource( 2 )
 
+[node name="Tween" type="Tween" parent="."]
+
 [connection signal="body_entered" from="Growl" to="." method="_on_Area_body_entered"]
 [connection signal="body_entered" from="Kill" to="." method="_on_Kill_body_entered"]

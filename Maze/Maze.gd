@@ -11,7 +11,9 @@ var cell_walls = {
 	Vector2(0, 1): S, 
 	Vector2(-1, 0): W
 }
-
+var music = [
+	
+]
 var map = []
 
 var tiles = [
