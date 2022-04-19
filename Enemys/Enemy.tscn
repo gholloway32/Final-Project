@@ -5,7 +5,7 @@
 [ext_resource path="res://Assests/lambert1.material" type="Material" id=3]
 
 [sub_resource type="BoxShape" id=7]
-extents = Vector3( 0.5246, 0.918634, 0.368627 )
+extents = Vector3( 0.561307, 0.918634, 0.368627 )
 
 [sub_resource type="SphereShape" id=8]
 radius = 4.0
