@@ -100,4 +100,7 @@ stream = ExtResource( 12 )
 pause_mode = 2
 visible = false
 
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
 [connection signal="timeout" from="Player/Pivot/Pistol/Flash/Timer" to="Player/Pivot/Pistol/Flash" method="_on_Timer_timeout"]
