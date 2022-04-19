@@ -1,0 +1,36 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Assests/Grass001_1K_Color.jpg" type="Texture" id=2]
+[ext_resource path="res://Assests/Grass001_1K_AmbientOcclusion.jpg" type="Texture" id=5]
+[ext_resource path="res://Assests/Grass001_1K_Roughness.jpg" type="Texture" id=6]
+[ext_resource path="res://Assests/Grass001_1K_NormalGL.jpg" type="Texture" id=8]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_texture = ExtResource( 2 )
+roughness_texture = ExtResource( 6 )
+roughness_texture_channel = 4
+normal_enabled = true
+normal_scale = 1.0
+normal_texture = ExtResource( 8 )
+ao_enabled = true
+ao_light_affect = 0.0
+ao_texture = ExtResource( 5 )
+ao_on_uv2 = false
+ao_texture_channel = 4
+
+[sub_resource type="PlaneMesh" id=2]
+material = SubResource( 1 )
+
+[sub_resource type="ConvexPolygonShape" id=3]
+points = PoolVector3Array( -1, 0, -1, -1, 0, 1, 1, 0, -1, 1, 0, 1 )
+
+[node name="Tile00" type="Spatial"]
+
+[node name="Ground" type="StaticBody" parent="."]
+
+[node name="MeshInstance" type="MeshInstance" parent="Ground"]
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="Ground"]
+shape = SubResource( 3 )
