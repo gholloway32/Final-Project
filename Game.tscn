@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://UI/HUD.gd" type="Script" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://Player/Flash.gd" type="Script" id=11]
 [ext_resource path="res://Assests/GunShot.wav" type="AudioStream" id=12]
 [ext_resource path="res://Assests/Pistol.glb" type="PackedScene" id=13]
+[ext_resource path="res://Maze/Powerups.gd" type="Script" id=14]
 
 [sub_resource type="CapsuleShape" id=4]
 radius = 0.603072
@@ -28,6 +29,9 @@ script = ExtResource( 5 )
 
 [node name="Enemies" type="Spatial" parent="Maze"]
 script = ExtResource( 9 )
+
+[node name="Powerups" type="Spatial" parent="Maze"]
+script = ExtResource( 14 )
 
 [node name="Player" type="KinematicBody" parent="."]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1, 0, 1 )
