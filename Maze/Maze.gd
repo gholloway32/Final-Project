@@ -41,14 +41,14 @@ var width = 20  						# width of map (in tiles)
 var height = 10  						# height of map (in tiles)
 var tile_size = Vector2.ZERO
 
-onready var Key = preload("res://Key/key.tscn")
+onready var Key = preload("res://Exit/Antidote.tscn")
 onready var Exit = preload("res://Exit/Exit.tscn")
 
 func _ready():
 	randomize()
 	make_maze()
 	var key = Key.instance()
-	key.translate(Vector3((width*tile)-1.5,1
+	key.translate(Vector3((width*tile*45)-1,1
 	,0.5))
 	add_child(key)
 	print(key.global_transform.origin)

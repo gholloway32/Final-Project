@@ -32,21 +32,21 @@ omni_attenuation = 9.85
 [node name="Timer" type="Timer" parent="Flash" index="2"]
 
 [node name="RayCast" type="RayCast" parent="." index="2"]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 10.2348, 0, -0.0130599 )
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 10.2348, 0.485207, -0.0130599 )
 enabled = true
-cast_to = Vector3( 0, 0, -50 )
+cast_to = Vector3( 0, 0, -100 )
 debug_shape_thickness = 5.0
 
 [node name="RayCast2" type="RayCast" parent="." index="3"]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 10.2348, 0, -1.44389 )
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 10.2348, 0, -0.738416 )
 enabled = true
-cast_to = Vector3( 0, 0, -50 )
+cast_to = Vector3( 0, 0, -100 )
 debug_shape_thickness = 5.0
 
 [node name="RayCast3" type="RayCast" parent="." index="4"]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 10.2348, 0, 1.19883 )
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 10.2348, 0, 0.86163 )
 enabled = true
-cast_to = Vector3( 0, 0, -50 )
+cast_to = Vector3( 0, 0, -100 )
 debug_shape_thickness = 5.0
 
 [node name="SpotLight" type="SpotLight" parent="." index="5"]

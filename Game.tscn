@@ -2,7 +2,6 @@
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://UI/HUD.gd" type="Script" id=2]
-[ext_resource path="res://Guns/Pistol.tscn" type="PackedScene" id=3]
 [ext_resource path="res://UI/InputRemapMenu.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Maze/Maze.gd" type="Script" id=5]
 [ext_resource path="res://Assests/Key.wav" type="AudioStream" id=6]
@@ -10,6 +9,7 @@
 [ext_resource path="res://Assests/Heroic Intrusion.ogg" type="AudioStream" id=8]
 [ext_resource path="res://Maze/Enemies.gd" type="Script" id=9]
 [ext_resource path="res://Guns/Shotgun.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Assests/Clock Sound.wav" type="AudioStream" id=11]
 [ext_resource path="res://Assests/GunShot.wav" type="AudioStream" id=12]
 [ext_resource path="res://Maze/Powerups.gd" type="Script" id=14]
 
@@ -29,11 +29,8 @@ transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0
 
 [node name="Guns" type="Spatial" parent="."]
 
-[node name="Pistol" parent="Guns" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1 )
-
 [node name="SpikeShotgun" parent="Guns" instance=ExtResource( 10 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 1, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 8 )
@@ -48,6 +45,9 @@ stream = ExtResource( 7 )
 
 [node name="Gunshot" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 12 )
+
+[node name="Clock" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
 
 [node name="UI" type="CanvasLayer" parent="."]
 
