@@ -106,8 +106,9 @@ __meta__ = {
 }
 
 [node name="Time" type="Label" parent="UI/HUD"]
-margin_right = 40.0
-margin_bottom = 14.0
+margin_right = 1024.0
+margin_bottom = 40.0
+align = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
