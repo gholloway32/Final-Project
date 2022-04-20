@@ -12,7 +12,8 @@ var cell_walls = {
 	Vector2(-1, 0): W
 }
 var music = [
-	
+	preload("res://Assests/Heroic Intrusion.ogg")
+	,preload("res://Assests/It's Time To Run.ogg")
 ]
 var map = []
 
@@ -55,6 +56,7 @@ func _ready():
 	exit.translate(Vector3((width*tile)-1.5,0.1,(height*tile)-1.5))
 	add_child(exit)
 	print(exit.global_transform.origin)
+	
 	
 func check_neighbors(cell, unvisited):
 	# returns an array of cell's unvisited neighbors

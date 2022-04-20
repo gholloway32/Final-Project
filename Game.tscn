@@ -7,7 +7,7 @@
 [ext_resource path="res://Maze/Maze.gd" type="Script" id=5]
 [ext_resource path="res://Assests/Key.wav" type="AudioStream" id=6]
 [ext_resource path="res://Assests/Zombie.wav" type="AudioStream" id=7]
-[ext_resource path="res://Assests/Music.ogg" type="AudioStream" id=8]
+[ext_resource path="res://Assests/Heroic Intrusion.ogg" type="AudioStream" id=8]
 [ext_resource path="res://Maze/Enemies.gd" type="Script" id=9]
 [ext_resource path="res://Guns/Shotgun.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Assests/GunShot.wav" type="AudioStream" id=12]
