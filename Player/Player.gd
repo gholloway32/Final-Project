@@ -8,7 +8,7 @@ var mouse_sensitivity = 0.002
 var mouse_range = 1.2
 var velocity = Vector3.ZERO
 onready var rc = $Pivot/RayCast
-onready var flash = $Pivot/blasterE/Flash
+onready var flash = $Pivot/Pistol/Flash
 onready var Decal = preload("res://Player/Decal.tscn")
 
 func _ready():

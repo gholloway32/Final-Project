@@ -5,13 +5,13 @@
 [ext_resource path="res://Assests/lambert1.material" type="Material" id=3]
 
 [sub_resource type="BoxShape" id=7]
-extents = Vector3( 0.5246, 0.918634, 0.368627 )
+extents = Vector3( 0.561307, 0.918634, 0.368627 )
 
 [sub_resource type="SphereShape" id=8]
 radius = 4.0
 
 [sub_resource type="BoxShape" id=9]
-extents = Vector3( 0.523, 0.919, 0.369 )
+extents = Vector3( 0.6, 0.919, 0.369 )
 
 [sub_resource type="ArrayMesh" id=1]
 resource_name = "basicCharacter_Body1_1"
@@ -121,7 +121,7 @@ shape = SubResource( 8 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0157324, -0.0581396, -0.0141655 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Kill"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.981437, 0.0126568 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.06144, 0.0126568 )
 shape = SubResource( 9 )
 
 [node name="Spatial" type="Spatial" parent="."]
