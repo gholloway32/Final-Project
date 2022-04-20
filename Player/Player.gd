@@ -7,9 +7,8 @@ var gravity = -500
 var mouse_sensitivity = 0.002
 var mouse_range = 1.2
 var velocity = Vector3.ZERO
-onready var rc = $Pivot/RayCast
-onready var flash = $Pivot/Pistol/Flash
-onready var Decal = preload("res://Player/Decal.tscn")
+
+var to_pickup = null
 
 func _ready():
 	camera.current = true
@@ -23,17 +22,11 @@ func _physics_process(delta):
 	velocity.z = desired_velocity.z
 	velocity = move_and_slide(velocity, Vector3.UP, true) 
 	velocity = get_input()*speed
+	if Input.is_action_pressed("shoot"):
+		shoot()
 	
-	if Input.is_action_just_pressed("shoot") and !flash.visible:
-		flash.shoot()
-		if rc.is_colliding():
-			var c = rc.get_collider()
-			var decal = Decal.instance()
-			rc.get_collider().add_child(decal)
-			decal.global_transform.origin = rc.get_collision_point()
-			decal.look_at(rc.get_collision_point()+rc.get_collision_normal(),Vector3.UP)
-			if c.is_in_group("Enemy"):
-				c.queue_free()
+	if Input.is_action_just_pressed("pickup"):
+		pickup()
 	
 func _unhandled_input(event):
 	if event is InputEventMouseMotion:
@@ -58,3 +51,26 @@ func get_input():
 		input_dir += camera.global_transform.basis.x
 	input_dir = input_dir.normalized()
 	return input_dir
+
+func shoot():
+	var gun = get_node_or_null("Pivot/Gun")
+	if gun != null and gun.has_method("shoot"):
+		gun.shoot()
+
+func pickup():
+	var gun = get_node_or_null("Pivot/Gun")
+	if gun != null:
+		pass
+	elif to_pickup != null:
+		gun = to_pickup.Pickup.instance()
+		gun.name == "Gun"
+		$Pivot.add_child(gun)
+		to_pickup.queue_free()
+
+func _on_Area_body_entered(body):
+	if body.is_in_group("Guns"):
+		to_pickup = body 
+
+
+func _on_Area_body_exited(body):
+	to_pickup = null
