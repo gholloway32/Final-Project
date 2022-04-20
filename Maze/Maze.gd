@@ -36,7 +36,7 @@ var tiles = [
 ]
 
 var tile = 2 						# 2-meter tiles
-var width = 20  						# width of map (in tiles)
+var width = 21  						# width of map (in tiles)
 var height = 10  						# height of map (in tiles)
 var tile_size = Vector2.ZERO
 
