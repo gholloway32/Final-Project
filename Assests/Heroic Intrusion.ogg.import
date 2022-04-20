@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Heroic Intrusion.ogg-370228b6f84610cb414e77379603913a.oggstr"
+
+[deps]
+
+source_file="res://Assests/Heroic Intrusion.ogg"
+dest_files=[ "res://.import/Heroic Intrusion.ogg-370228b6f84610cb414e77379603913a.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

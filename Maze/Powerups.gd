@@ -8,7 +8,7 @@ func _ready():
 	var locations = []
 	for x in range(Maze.width-2):
 		for z in range(Maze.height-2):
-			locations.append(Vector3(((x+1)*Maze.tile)-1,0.1,((z+1)*Maze.tile)-1))
+			locations.append(Vector3(((x*15)*Maze.tile)-1.5,0.1,((z*15)*Maze.tile)-1.5))
 	locations.shuffle()
 	for i in range(count):
 			var powerup = PowerUp.instance()
