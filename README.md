@@ -47,5 +47,5 @@ Clock sound https://freesound.org/
 After the class is over. 
 
 # Created by: Group Name
-Grant Holloway - Coding (Programming)
-Connor Brinson - Character/Object design (Game Art)
+ - Grant Holloway - Coding (Programming)
+ - Connor Brinson - Character/Object design (Game Art)
