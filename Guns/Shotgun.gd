@@ -1,2 +1,2 @@
 extends RigidBody
-var Pickup = preload("res://Weapons/SpikeShotgun.tscn")
+export var Pickup = preload("res://Weapons/Basic Pistol.tscn")

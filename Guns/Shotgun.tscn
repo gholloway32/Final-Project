@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Assests/color11.material" type="Material" id=1]
 [ext_resource path="res://Assests/color3.material" type="Material" id=2]
 [ext_resource path="res://Assests/color9.material" type="Material" id=3]
 [ext_resource path="res://Assests/color14.material" type="Material" id=4]
 [ext_resource path="res://Guns/Shotgun.gd" type="Script" id=5]
+[ext_resource path="res://Weapons/SpikeShotgun.tscn" type="PackedScene" id=6]
 
 [sub_resource type="ArrayMesh" id=1]
 resource_name = "SpikeShotgun_ Instance"
@@ -63,6 +64,7 @@ extents = Vector3( 0.725734, 0.13093, 0.12897 )
 [node name="SpikeShotgun" type="RigidBody" groups=["Guns"]]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0 )
 script = ExtResource( 5 )
+Pickup = ExtResource( 6 )
 
 [node name="generated(Clone)" type="MeshInstance" parent="."]
 transform = Transform( 0.06, 0, 0, 0, 0.06, 0, 0, 0, 0.06, 0, 0, 0 )

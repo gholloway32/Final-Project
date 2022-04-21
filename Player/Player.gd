@@ -2,8 +2,8 @@ extends KinematicBody
 
 onready var camera = $Pivot/Camera
 
-var speed = 8
-var gravity = -500
+var speed = 5
+var gravity = -9.8
 var mouse_sensitivity = 0.002
 var mouse_range = 1.2
 var velocity = Vector3.ZERO
@@ -14,14 +14,14 @@ func _ready():
 	camera.current = true
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
-func _physics_process(delta):
-	velocity.y +=gravity * delta
-	var desired_velocity = get_input() *speed
-	
-	velocity.x = desired_velocity.x
-	velocity.z = desired_velocity.z
-	velocity = move_and_slide(velocity, Vector3.UP, true) 
+func _physics_process(_delta):
 	velocity = get_input()*speed
+	velocity.y += gravity 
+	if is_on_floor():
+		velocity.y = 0
+	if velocity != Vector3.ZERO:
+		velocity = move_and_slide(velocity, Vector3.UP)
+	
 	if Input.is_action_just_pressed("shoot"):
 		shoot()
 		
@@ -60,7 +60,7 @@ func shoot():
 
 func pickup():
 	var gun = get_node_or_null("Pivot/Gun")
-	if gun != null:
+	if gun!= null:
 		var to_drop = gun.Pickup.instance()
 		Guns.add_child(to_drop)
 		to_drop.global_transform.origin = global_transform.origin + Vector3(0,1.5,0)
@@ -80,5 +80,5 @@ func _on_Area_body_entered(body):
 		to_pickup = body 
 
 
-func _on_Area_body_exited(body):
-	to_pickup = null
+#func _on_Area_body_exited(body):
+#	to_pickup = null

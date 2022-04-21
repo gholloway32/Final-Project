@@ -40,8 +40,10 @@ current = true
 [node name="Area" type="Area" parent="."]
 
 [node name="CollisionShape" type="CollisionShape" parent="Area"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.536033, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.202749, 0 )
 shape = SubResource( 6 )
+
+[node name="Inventory" type="Spatial" parent="."]
 
 [connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]
 [connection signal="body_exited" from="Area" to="." method="_on_Area_body_exited"]
