@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://UI/LoseTime.gd" type="Script" id=1]
+[ext_resource path="res://Assests/Zombie Horde.jpg" type="Texture" id=2]
 
 [node name="LoseTime" type="Control"]
 anchor_right = 1.0
@@ -14,6 +15,15 @@ __meta__ = {
 anchor_right = 1.0
 anchor_bottom = 1.0
 color = Color( 0.266667, 0.266667, 0.266667, 1 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 2 )
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Label" type="Label" parent="."]
 anchor_left = 0.5
@@ -38,6 +48,9 @@ margin_top = 17.0
 margin_right = 50.0
 margin_bottom = 57.0
 text = "Play Again?"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Quit" type="Button" parent="."]
 anchor_left = 0.5
