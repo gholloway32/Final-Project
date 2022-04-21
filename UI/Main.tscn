@@ -21,6 +21,9 @@ margin_bottom = 600.0
 text = "You have been Infected! Find a cure or DIE!! "
 align = 1
 valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Play" type="Button" parent="."]
 margin_left = 458.0
