@@ -8,12 +8,12 @@ We thought of time crunch as running out of time. In our game, you have been bit
 Traverse through a zombie-infested maze in order to find the antidote and escape. You are trying to get through the maze before the timer of 1 minute runs out. If you find the antidote, the exit opens and you are free, as long as you don't run into enemies or run out of time. 
 
 Controls:
+E - pick up/throw weapons - press E off spawn to pick up pistol
 Space or left mouse click - shoot
 A - left
 D - right
 W - forward
 S - backward
-E - pick up/throw weapons
 Esc - Quit
 
 ## Impediments
