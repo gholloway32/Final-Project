@@ -103,7 +103,7 @@ extents = Vector3( 11.4093, 13.6149, 4.13159 )
 radius = 30.0
 
 [sub_resource type="BoxShape" id=3]
-extents = Vector3( 11.409, 13.615, 4.132 )
+extents = Vector3( 11.5, 13.615, 4.2 )
 
 [node name="Zombie" type="KinematicBody" groups=["Enemy"]]
 transform = Transform( 0.06, 0, 0, 0, 0.06, 0, 0, 0, 0.06, 0, 0.6, 0 )

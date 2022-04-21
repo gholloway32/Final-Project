@@ -23,5 +23,4 @@ func _on_Area_body_entered(body):
 
 func _on_Kill_body_entered(body):
 	if body.name == "Player":
-		pass
-		#var _scene = get_tree().change_scene("res://UI/Lose.tscn")
+		var _scene = get_tree().change_scene("res://UI/Lose.tscn")
