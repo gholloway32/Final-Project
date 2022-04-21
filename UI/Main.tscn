@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://UI/Main.gd" type="Script" id=1]
+[ext_resource path="res://Assests/2017-08-23_164949.png" type="Texture" id=2]
 
 [node name="Main" type="Control"]
 anchor_right = 1.0
@@ -11,13 +12,29 @@ __meta__ = {
 }
 
 [node name="Background" type="ColorRect" parent="."]
-margin_right = 1024.0
-margin_bottom = 600.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 color = Color( 0.266667, 0.266667, 0.266667, 1 )
 
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 2 )
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Label" type="Label" parent="."]
-margin_right = 1024.0
-margin_bottom = 600.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -512.0
+margin_top = -300.0
+margin_right = 512.0
+margin_bottom = 300.0
+custom_colors/font_color = Color( 0.898039, 0.0705882, 0.0705882, 1 )
 text = "You have been Infected! Find a cure or DIE!! "
 align = 1
 valign = 1
@@ -26,20 +43,28 @@ __meta__ = {
 }
 
 [node name="Play" type="Button" parent="."]
-margin_left = 458.0
-margin_top = 330.0
-margin_right = 558.0
-margin_bottom = 370.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -69.0
+margin_top = 17.0
+margin_right = 31.0
+margin_bottom = 57.0
 text = "Play Game"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Quit" type="Button" parent="."]
-margin_left = 457.0
-margin_top = 381.0
-margin_right = 557.0
-margin_bottom = 421.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -69.0
+margin_top = 70.0
+margin_right = 31.0
+margin_bottom = 110.0
 text = "Quit"
 __meta__ = {
 "_edit_use_anchors_": false
