@@ -1,4 +1,4 @@
-# Project Name - Zombie Maze
+# Project Name - Do or Die: Apocalypse Edition
 MSCH-C220 Game Jam, April 2022
 
 ## Theme - Time Crunch
