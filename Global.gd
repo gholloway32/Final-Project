@@ -53,3 +53,6 @@ func update_time(t):
 	time += t 
 	if time <= 0:
 		var _scene = get_tree().change_scene("res://UI/LoseTime.tscn")
+	var hud = get_node_or_null("/root/Game/UI/HUD")
+	if hud != null:
+		hud.update_time() 
