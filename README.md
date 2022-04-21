@@ -14,6 +14,7 @@ D - right
 W - forward
 S - backward
 E - pick up/throw weapons
+Esc - Quit
 
 ## Impediments
 The main struggle was to get the enemies, the antidote and the clocks to randomly spawn around the maze. Another problem was being able to pick up the antidote. 
@@ -46,4 +47,5 @@ Clock sound https://freesound.org/
 After the class is over. 
 
 # Created by: Group Name
-List of group members (and contributions)
+Grant Holloway - Coding (Programming)
+Connor Brinson - Character/Object design (Game Art)
